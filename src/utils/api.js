@@ -1,34 +1,45 @@
 
 export const fetchLanguagePack = async (lang)=> {
-  if (lang === 'hi') {
     return {
-      lang: 'hi',
-      labels: {
-        dashboard: 'डैशबोर्ड',
-        emergency: 'आपातकाल',
-      },
-      firstAidTopics: [
-        {
-          id: 1,
-          title: 'साँप का काटना',
-          steps: ['शांत रखें', 'अस्पताल ले जाएँ'],
-        },
+  lang: 'hi',
+  labels: {
+    dashboard: 'डैशबोर्ड',
+    emergency: 'आपातकाल',
+    settings: 'सेटिंग्स',
+    next: 'आगे',
+    back: 'पीछे',
+  },
+  firstAidTopics: [
+    {
+      id: 1,
+      title: 'साँप का काटना',
+      steps: [
+        'व्यक्ति को शांत रखें',
+        'घाव को न काटें',
+        'हिलने-डुलने से रोकें',
+        'तुरंत अस्पताल ले जाएँ',
       ],
-    };
-  }
-
-  return {
-    lang: 'en',
-    labels: {
-      dashboard: 'Dashboard',
-      emergency: 'Emergency',
     },
-    firstAidTopics: [
-      {
-        id: 1,
-        title: 'Snake Bite',
-        steps: ['Keep calm', 'Go to hospital'],
-      },
-    ],
-  };
+    {
+      id: 2,
+      title: 'जलना (Burn)',
+      steps: [
+        'जले हुए स्थान को ठंडे पानी में रखें',
+        'मलहम या तेल न लगाएँ',
+        'साफ कपड़े से ढकें',
+        'डॉक्टर को दिखाएँ',
+      ],
+    },
+    {
+      id: 3,
+      title: 'अधिक रक्तस्राव',
+      steps: [
+        'घाव पर दबाव डालें',
+        'हाथ ऊपर रखें',
+        'साफ कपड़ा इस्तेमाल करें',
+        'तुरंत चिकित्सा सहायता लें',
+      ],
+    },
+  ],
 };
+    };

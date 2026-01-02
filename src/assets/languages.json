@@ -19,6 +19,21 @@
       "id": "te",
       "name": "Telugu",
       "nativeName": "తెలుగు"
-    }
+    },
+    {
+      "id": "bn",
+      "name": "Bengali",
+      "nativeName": "বাংলা"
+    },
+    {
+      "id": "mr",
+      "name": "Marathi",
+      "nativeName": "मराठी"
+    },
+    {
+      "id": "gu",
+      "name": "Gujarati",
+      "nativeName": "ગુજરાતી"
+    } 
   ]
 }
