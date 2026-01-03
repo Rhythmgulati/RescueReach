@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import Header from '../components/Header';
 
 const Contacts = ({ navigation }: any) => {
   const emergencyContacts = [
@@ -94,8 +95,8 @@ const Contacts = ({ navigation }: any) => {
   };
 
   return (
-    <SafeAreaView style={{ padding: 10 }}>
-      <Text style={{ fontSize: 20, marginBottom: 15 }}>Contacts</Text>
+    <View style={{ flex: 1 }}>
+      <Header title={'Contacts'}></Header>
       <ScrollView>
         <Pressable
           style={styles.addContactCard}
@@ -130,7 +131,7 @@ const Contacts = ({ navigation }: any) => {
           </View>
         ))}
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 

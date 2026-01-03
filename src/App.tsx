@@ -10,7 +10,11 @@ const App = () => {
     <LanguageProvider>
       <NavigationContainer>
         <AppNavigator />
-        <ToastManager position="top" duration={3000} style={{ zIndex: 9999 }} />
+        <ToastManager
+          position="bottom"
+          duration={3000}
+          style={{ zIndex: 9999 }}
+        />
       </NavigationContainer>
     </LanguageProvider>
   );

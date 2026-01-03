@@ -3,11 +3,14 @@ export const fetchLanguagePack = async (lang)=> {
     return {
   lang: 'hi',
   labels: {
-    dashboard: 'डैशबोर्ड',
-    emergency: 'आपातकाल',
-    settings: 'सेटिंग्स',
-    next: 'आगे',
-    back: 'पीछे',
+  dashboard: 'डैशबोर्ड',
+  emergency: 'आपातकाल',
+  settings: 'सेटिंग्स',
+
+  commonIssues: 'सामान्य समस्याएँ',
+  emergencyNumbers: 'आपातकालीन नंबर',
+  woundAnalysis: 'घाव विश्लेषण',
+  checkMedicine: 'दवा पहचानें',
   },
   firstAidTopics: [
     {

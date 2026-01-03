@@ -32,7 +32,7 @@ const Settings = ({ navigation }: any) => {
         item?.redirect ? (
           <TouchableOpacity
             key={index}
-            onPress={() => navigation.navigate(item.redirect)}
+            onPress={() => navigation.popToTop(item.redirect)}
             style={styles.listitem}
           >
             <Text>

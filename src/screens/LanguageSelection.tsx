@@ -5,6 +5,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { LanguageContext } from '../context/LanguageContext';
 import { Toast } from 'toastify-react-native';
 import { saveLanguage } from '../utils/storage';
+import Header from '../components/Header';
 
 const LanguageSelection = ({ navigation }: any) => {
   const { setLanguage } = React.useContext(LanguageContext);
@@ -16,9 +17,9 @@ const LanguageSelection = ({ navigation }: any) => {
   };
 
   return (
-    <ScrollView>
-      <View style={styles.container}>
-        <Text>Please Select Your Preffered Language</Text>
+    <View style={{ flex: 1 }}>
+      <Header title={'Please select your preffered Language'} />
+      <ScrollView>
         <View style={styles.cardContainer}>
           {languages.languages.map(lang => (
             <Pressable
@@ -26,26 +27,18 @@ const LanguageSelection = ({ navigation }: any) => {
               onPress={() => selectLanguage(lang.id)}
               style={styles.pressable}
             >
-              <Text>{lang.name}</Text>
+              <Text>{lang.nativeName}</Text>
             </Pressable>
           ))}
         </View>
-        <Pressable onPress={() => Toast.success('clicked')}>
-          <Text>Hello</Text>
-        </Pressable>
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </View>
   );
 };
 
 export default LanguageSelection;
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 100,
-    alignItems: 'center',
-  },
   cardContainer: {
     flex: 1,
     flexDirection: 'row',
@@ -58,6 +51,9 @@ const styles = StyleSheet.create({
     margin: 10,
     height: 150,
     backgroundColor: '#ddd',
+    borderColor: '#0F2854',
+    elevation: 10,
+    borderWidth: 4,
     width: '40%',
     alignItems: 'center',
     borderRadius: 10,

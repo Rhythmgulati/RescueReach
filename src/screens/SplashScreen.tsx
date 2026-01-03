@@ -28,7 +28,7 @@ const SplashScreen = ({ navigation }: any) => {
   }, []);
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#4f46e5' }}>
       <Image source={require('../assets/logo.png')} style={styles.image} />
       {/* <Text>SplashScreen</Text> */}
     </SafeAreaView>
